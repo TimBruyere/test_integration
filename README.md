@@ -36,9 +36,7 @@
  > Good.
  9. Créer un workflow pour automatiser le rollback en cas d'échec du
  déploiement.
- 10.Réaliser un workflow pour intégrer l'analyse de code statique et les rapports
- de couverture de tests.
+ 10. Réaliser un workflow pour intégrer l'analyse de code statique et les rapports de couverture de tests.
  > Résultats visibles lors de l'exécution. le rapport est disponible à la fin de la page action du workflow.
 
-__Ynov 2023-2024__
 ***
