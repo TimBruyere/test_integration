@@ -30,9 +30,10 @@
  jobs.
  7. Écrire un script pour gérer les variables d'environnement de manière sécurisée
  dans GitHub Actions.
- > Création puis utilisation d'une variable d'environnement.
+ > Création puis utilisation d'une variable d'environnement. Attention le echo montre des "*"
  8. Configurer un job qui s'exécute seulement quand un changement a lieu dans
  un dossier spécifique du répertoire.
+ > Good 
  9. Créer un workflow pour automatiser le rollback en cas d'échec du
  déploiement.
  10.Réaliser un workflow pour intégrer l'analyse de code statique et les rapports
