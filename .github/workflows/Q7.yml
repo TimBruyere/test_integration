@@ -1,0 +1,10 @@
+jobs:
+  test:
+    name: Gestion de variable
+    runs-on: windows-latest
+    steps:
+      - name: Set up environment
+        run: echo "Super_variable_secrète=${{ secrets.variable_secrete }}" >> $GITHUB_ENV
+
+      - name: Magnifique variable secrète
+        run: echo $Super_variable_secrète
