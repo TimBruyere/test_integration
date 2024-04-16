@@ -3,9 +3,11 @@
 # Test_integration
 ***
 
-**SOlène Okome**
+
+**Solène Okome**
 **Timothé Bruyère**
 **Guillaume Petta**
+
 
 ***
  1. Créer un workflow simple qui exécute des tests à chaque push sur la branche
