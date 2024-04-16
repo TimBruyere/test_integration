@@ -33,10 +33,11 @@
  > Création puis utilisation d'une variable d'environnement. Attention le echo montre des "*"
  8. Configurer un job qui s'exécute seulement quand un changement a lieu dans
  un dossier spécifique du répertoire.
- > Good 
+ > Good.
  9. Créer un workflow pour automatiser le rollback en cas d'échec du
  déploiement.
  10.Réaliser un workflow pour intégrer l'analyse de code statique et les rapports
- de couverture de tests
+ de couverture de tests.
+ > Résultats visibles lors de l'exécution. 
 
 ***
