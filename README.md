@@ -22,9 +22,9 @@
  statut du déploiement.
  4. Configurer un workflow pour exécuter des tests sur plusieurs versions d'un
  environnement de programmation (ex. différentes versions de Node.js).
- > Les tests de différentes versions de nods révèlent que les versions 12.x ne sont plus utilisables.
+ > Les tests de différentes versions de nodes révèlent que les versions 12.x ne sont plus utilisables.
  6. Créer un workflow qui utilise des matrices pour exécuter des tests parallèles.   
- > La question 5 reprend la matrice de la question 4 mais en permettant de lancer le test de toutes les versions d'environnement en parralèle plutôt qu'à la suite.
+ > La question 5 reprend la matrice de la question 4 (sauf 12.x) mais en permettant de lancer le test de toutes les versions d'environnement en parralèle plutôt qu'à la suite.
  6. Développer un workflow qui utilise des artifacts pour passer des fichiers entre
  jobs.
  7. Écrire un script pour gérer les variables d'environnement de manière sécurisée
