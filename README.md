@@ -16,6 +16,7 @@
 ***
  1. Créer un workflow simple qui exécute des tests à chaque push sur la branche
  principale.  
+ > Ce workflow contient un job nommé test qui exécute des tests JavaScript. Les étapes du job incluent  la configuration de l'environnement Node.js, l'installation des dépendances JavaScript à partir de package.json et l'exécution des tests JavaScript avec npm test.
  2. Écrire un workflow pour déployer automatiquement une application sur un
  service cloud lorsque les tests passent sur la branche de production.
  3. Modifier un workflow existant pour intégrer des notifications Slack sur le
