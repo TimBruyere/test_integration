@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1711642041005" clover="3.2.0">
+  <project timestamp="1711642041006" name="All files">
+    <metrics statements="53" coveredstatements="50" conditionals="26" coveredconditionals="20" methods="10" coveredmethods="10" elements="89" coveredelements="80" complexity="0" loc="53" ncloc="53" packages="8" files="9" classes="9"/>
+    <package name="Methodologie_test_unitaire">
+      <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="addition.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\addition.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="fetchData.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\fetchData.js">
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Methodologie_test_unitaire.exercice1">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="multiply.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\exercice1\multiply.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Methodologie_test_unitaire.exercice2">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="multiply.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\exercice2\multiply.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Methodologie_test_unitaire.exercice3">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="fetchData2.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\exercice3\fetchData2.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Methodologie_test_unitaire.exercice4">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Parsejson.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\exercice4\Parsejson.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Methodologie_test_unitaire.exercice5">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="sendEmail.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\exercice5\sendEmail.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Methodologie_test_unitaire.exercice6">
+      <metrics statements="12" coveredstatements="11" conditionals="12" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <file name="callbacky.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\exercice6\callbacky.js">
+        <metrics statements="12" coveredstatements="11" conditionals="12" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="3" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Methodologie_test_unitaire.exercice7">
+      <metrics statements="12" coveredstatements="12" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+      <file name="geom.js" path="C:\Users\Kedy\OneDrive\Documents\Methodologie_test_unitaire\exercice7\geom.js">
+        <metrics statements="12" coveredstatements="12" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+        <line num="2" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="4" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
