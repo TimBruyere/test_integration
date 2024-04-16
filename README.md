@@ -39,5 +39,4 @@
  10.Réaliser un workflow pour intégrer l'analyse de code statique et les rapports
  de couverture de tests.
  > Résultats visibles lors de l'exécution. 
-
 ***
