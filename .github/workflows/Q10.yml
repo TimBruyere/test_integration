@@ -1,0 +1,44 @@
+name: Tests et couverture de code
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Exécution des tests
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v2
+
+    - name: Installer les dépendances
+      run: npm install
+
+    - name: Exécuter les tests Jest
+      run: npm test
+
+  coverage:
+    name: Rapport de couverture
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v2
+
+    - name: Installer les dépendances
+      run: npm install
+
+    - name: Exécuter les tests Jest avec la couverture
+      run: npm test -- --coverage
+
+    - name: Sauvegarder le rapport de couverture
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: ./coverage
