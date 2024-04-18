@@ -18,7 +18,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: windows-latest
+      vmImage: ubuntu-latest
     steps:
     - script: echo 'Début du déploiement sur Azure DevOps'
       displayName: 'Initialisation du déploiement'
