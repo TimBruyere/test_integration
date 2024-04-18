@@ -27,4 +27,18 @@ jobs:
       run: |
         docker tag my-docker-image ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set Previous Version
+      id: set_previous_version
+      run: |
+        echo "my-previous-image-tag" >> $GITHUB_ENV
+
+    - name: Use Previous Version
+      run: |
+        echo "Previous version is $PREVIOUS_VERSION"
+      env:
+        PREVIOUS_VERSION: ${{ steps.set_previous_version.outputs.PREVIOUS_VERSION }}
+
       
