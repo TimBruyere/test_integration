@@ -1,0 +1,32 @@
+name: artifact-passing
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Create text file
+        run: echo "Hello, world!" > example.txt
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: example.txt
+
+  deploy:
+    runs-on: windows-latest
+    needs: build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
+          path: ./downloaded-artifact
+      
+      - name: Print artifact contents
+        run: cat ./downloaded-artifact/example.txt
