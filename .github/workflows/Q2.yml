@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     
     steps:
     - name: Checkout repository
@@ -28,6 +28,3 @@ jobs:
         docker tag my-docker-image ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
       
-    - name: Deploy Docker container
-      run: |
-        docker run -d -p 8080:80 --name my-container ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
