@@ -2,14 +2,19 @@ name: Check Deployment Status and Trigger Rollback
 
 on:
   workflow_run:
-    workflows: ["Q2.yml"]
+    workflows: [Q2.yml]
     types:
       - completed
 
 jobs:
-  check-deployment:
+  on-success:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Fail
-        if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-        run: echo 'The triggering workflow failed'
+      - run: echo 'The triggering workflow passed'
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'The triggering workflow failed'
+
