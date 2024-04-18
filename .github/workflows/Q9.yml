@@ -1,39 +1,24 @@
+
+
+
 name: Check Deployment Status and Trigger Rollback
 
 on:
   workflow_run:
-    workflows: [Q2.yml]
+    workflows: [Q2]
     types:
       - completed
 
 
 
 jobs:
-  check-deployment:
+   on-failure:
     runs-on: ubuntu-latest
-    outputs:
-      deployment-status: ${{ steps.get_status.outputs.status }} # Correction du nom de la sortie
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Print API Response
-        run: |
-          response=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-          "https://api.github.com/repos/${{ github.repository }}/actions/workflows/Q2.yml/runs")
-          echo "$response"
+      - name: Fail
+      - run: echo 'The triggering workflow failed' 
 
-      - name: Get Last Deployment Status
-        id: get_status
-        run: |
-          status=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-          "https://api.github.com/repos/${{ github.repository }}/actions/runs?event=push&per_page=1" | jq -r '.workflow_runs[0].conclusion')
-          echo "::set-output name=status::$status"
-
-  rollback:
-    needs: check-deployment
-    runs-on: ubuntu-latest
-    if: ${{ needs.check-deployment.outputs.deployment-status == 'failure' }} # Vérification du statut du déploiement
-    steps:
       - name: Checkout code
         uses: actions/checkout@v2
         
