@@ -2,7 +2,7 @@ name: Check Deployment Status and Trigger Rollback
 
 on:
   workflow_run:
-    workflows: [Q2.yml]
+    workflows: [Q2]
     types:
       - completed
 
