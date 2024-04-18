@@ -28,7 +28,6 @@ jobs:
       run: |
         docker tag my-docker-image ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
-    continue-on-error : true
 
   build:
     runs-on: ubuntu-latest
