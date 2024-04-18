@@ -32,9 +32,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Set Previous Version
-      id: set_previous_version
-      run: echo "PREVIOUS_VERSION=my-previous-image-tag" >> $GITHUB_ENV
+    - name: Get Previous Version Tag
+      id: get_previous_version
+      run: |
+        TAG=$(curl -s https://registry.hub.docker.com/v2/repositories/${{ secrets.DOCKER_USERNAME }}/my-docker-image/tags/ | jq -r '.results[].name' | grep -v "latest" | tail -n 1)
+        echo "PREVIOUS_VERSION=$TAG" >> $GITHUB_ENV
       
     - name: Use Previous Version
       run: |
