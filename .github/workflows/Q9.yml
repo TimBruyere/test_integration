@@ -30,7 +30,6 @@ jobs:
       - name: Redéployer la version précédente
         run: |
           docker pull ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
-          docker tag my-docker-image:${{ env.PREVIOUS_VERSION }} ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
 
 
