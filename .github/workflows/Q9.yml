@@ -10,7 +10,7 @@ jobs:
   check-deployment:
     runs-on: ubuntu-latest
     outputs:
-      deployment-status: ${{ steps.get_status.outputs.status }} # Utilisation correcte de la sortie
+      deployment-status: ${{ steps.get_status.outputs.status }} # Correction du nom de la sortie
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
