@@ -30,6 +30,6 @@ stages:
         tags: |
           $(tag)
     - script: |
-        curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Le déploiement a été $(Build.Reason)\"}" https://discord.com/api/webhooks/1229740540178731099/ktCP8ziVjamWyZq5_Q7BPzQdlGQnNDwsihuvjE43B8O64sC4DVgyUej6GsuUQokMl4_f
+        curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Le déploiement a été efféctué : $(Build.Reason)\"}" https://discord.com/api/webhooks/1229740540178731099/ktCP8ziVjamWyZq5_Q7BPzQdlGQnNDwsihuvjE43B8O64sC4DVgyUej6GsuUQokMl4_f
       displayName: 'Send Discord Notification'
 
