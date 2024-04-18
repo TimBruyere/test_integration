@@ -39,6 +39,3 @@ jobs:
     - name: Use Previous Version
       run: |
         echo "Previous version is $PREVIOUS_VERSION"
-```
-
-Dans cet exemple, j'ai corrigé l'étape "Set Previous Version" pour utiliser la syntaxe correcte pour définir une variable d'environnement avec `$GITHUB_ENV`. Maintenant, elle écrit `PREVIOUS_VERSION=my-previous-image-tag` dans `$GITHUB_ENV`, ce qui définit correctement la variable d'environnement `PREVIOUS_VERSION`.
