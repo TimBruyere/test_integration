@@ -18,7 +18,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: ubuntu-latest
+      vmImage: windows-latest
     steps:
     - script: echo 'Début du déploiement sur Azure DevOps'
       displayName: 'Initialisation du déploiement'
@@ -32,5 +32,5 @@ stages:
     - script: |
         # curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Le déploiement a été effectué : $(Build.Reason).\"}" https://discord.com/api/webhooks/1229740540178731099/ktCP8ziVjamWyZq5_Q7BPzQdlGQnNDwsihuvjE43B8O64sC4DVgyUej6GsuUQokMl4_f 
       displayName: 'Send Discord Notification'
-      
+
 # <@314439140856954882> pour notifier un utilisateur
