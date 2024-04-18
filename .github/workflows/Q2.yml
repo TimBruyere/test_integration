@@ -1,8 +1,4 @@
-Il semble y avoir une erreur dans la façon dont `$GITHUB_ENV` est utilisé pour définir une variable d'environnement dans GitHub Actions. La syntaxe correcte pour définir une variable d'environnement dans GitHub Actions est d'utiliser `echo` avec le format `VARNAME=VALUE >> $GITHUB_ENV`.
 
-Voici comment vous pouvez corriger cela dans votre workflow :
-
-```yaml
 name: deploy-docker
 
 on:
