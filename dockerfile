@@ -1,4 +1,4 @@
-FROM windows:latest
+FROM ubuntu:latest
 
 # Install Docker CLI
 RUN apt-get update && apt-get install -y \
