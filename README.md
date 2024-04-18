@@ -20,6 +20,7 @@
  2. Écrire un workflow pour déployer automatiquement une application sur un
  service cloud lorsque les tests passent sur la branche de production.
  > Version Cloud : Ne fonctionne qu'avec une Vm ubuntu et pas windows.
+
  > Version Docker : Ne fonctionne qu'avec un runs-on sur ubuntu et pas windows.
  3. Modifier un workflow existant pour intégrer des notifications Slack sur le
  statut du déploiement.
