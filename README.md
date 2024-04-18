@@ -21,6 +21,7 @@
  service cloud lorsque les tests passent sur la branche de production.
  3. Modifier un workflow existant pour intégrer des notifications Slack sur le
  statut du déploiement.
+ > Adapté au workflow Q1.
  4. Configurer un workflow pour exécuter des tests sur plusieurs versions d'un
  environnement de programmation (ex. différentes versions de Node.js).
  > Les tests de différentes versions de nodes révèlent que les versions 12.x ne sont plus utilisables.
