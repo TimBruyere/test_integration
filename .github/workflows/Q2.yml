@@ -34,9 +34,8 @@ jobs:
     steps:
     - name: Get Previous Version Tag
       id: get_previous_version
-      run: |
-        TAG=$(curl -s https://registry.hub.docker.com/v2/repositories/${{ secrets.DOCKER_USERNAME }}/my-docker-image/tags/ | jq -r '.results[].name' | grep -v "latest" | tail -n 1)
-        echo "PREVIOUS_VERSION=$TAG" >> $GITHUB_ENV
+      run: 
+        echo "PREVIOUS_VERSION=latest" >> $GITHUB_ENV
       
     - name: Use Previous Version
       run: |
