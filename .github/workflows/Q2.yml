@@ -1,9 +1,14 @@
+Il semble y avoir une erreur dans la façon dont `$GITHUB_ENV` est utilisé pour définir une variable d'environnement dans GitHub Actions. La syntaxe correcte pour définir une variable d'environnement dans GitHub Actions est d'utiliser `echo` avec le format `VARNAME=VALUE >> $GITHUB_ENV`.
+
+Voici comment vous pouvez corriger cela dans votre workflow :
+
+```yaml
 name: deploy-docker
 
 on:
   push:
     branches:
-      - main  # Adjust branch as needed
+      - main  # Ajustez la branche si nécessaire
 
 jobs:
   deploy:
@@ -27,18 +32,17 @@ jobs:
       run: |
         docker tag my-docker-image ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
+
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Set Previous Version
       id: set_previous_version
-      run: |
-        echo "my-previous-image-tag" >> $GITHUB_ENV
-
+      run: echo "PREVIOUS_VERSION=my-previous-image-tag" >> $GITHUB_ENV
+      
     - name: Use Previous Version
       run: |
         echo "Previous version is $PREVIOUS_VERSION"
-      env:
-        PREVIOUS_VERSION: ${{ steps.set_previous_version.outputs.PREVIOUS_VERSION }}
+```
 
-      
+Dans cet exemple, j'ai corrigé l'étape "Set Previous Version" pour utiliser la syntaxe correcte pour définir une variable d'environnement avec `$GITHUB_ENV`. Maintenant, elle écrit `PREVIOUS_VERSION=my-previous-image-tag` dans `$GITHUB_ENV`, ce qui définit correctement la variable d'environnement `PREVIOUS_VERSION`.
