@@ -1,8 +1,20 @@
-# Use an official Nginx image as the base image
-FROM nginx:alpine
+FROM ubuntu:latest
 
-# Copy the HTML content into the default Nginx web server directory
-COPY ./html /usr/share/nginx/html
+# Install Docker CLI
+RUN apt-get update && apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common \
+ && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \
+ && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+ && apt-get update \
+ && apt-get install -y docker-ce-cli \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
-# Expose port 80 to allow external access to the Nginx web server
-EXPOSE 80
+# Define the entrypoint script
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
