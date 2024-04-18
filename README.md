@@ -19,6 +19,7 @@
  > Ce workflow contient un job nommé Run test qui exécute des tests JavaScript. Les étapes du job incluent  la configuration de l'environnement Node.js, l'installation des dépendances JavaScript à partir de package.json et l'exécution des tests JavaScript avec npm test.
  2. Écrire un workflow pour déployer automatiquement une application sur un
  service cloud lorsque les tests passent sur la branche de production.
+ > Version Cloud : Ne fonctionne qu'avec une Vm ubuntu et pas windows.
  > Version Docker : Ne fonctionne qu'avec un runs-on sur ubuntu et pas windows.
  3. Modifier un workflow existant pour intégrer des notifications Slack sur le
  statut du déploiement.
@@ -30,6 +31,7 @@
  > La question 5 reprend la matrice de la question 4 (sauf 12.x) mais en permettant de lancer le test de toutes les versions d'environnement en parralèle plutôt qu'en séquentielle.
  6. Développer un workflow qui utilise des artifacts pour passer des fichiers entre
  jobs.
+ > Good.
  7. Écrire un script pour gérer les variables d'environnement de manière sécurisée
  dans GitHub Actions.
  > Création puis utilisation d'une variable d'environnement. Attention le echo montre des "*"
@@ -38,6 +40,7 @@
  > Jobs se lançant bien uniquement suite à la modification du dossier "Exercice".
  9. Créer un workflow pour automatiser le rollback en cas d'échec du
  déploiement.
+ > Lancement du workflow se déclenchant bien selon succes ou failure de workflow 2.
  10. Réaliser un workflow pour intégrer l'analyse de code statique et les rapports de couverture de tests.
  > Résultats visibles lors de l'exécution. le rapport est disponible à la fin de la page action du workflow.
 
